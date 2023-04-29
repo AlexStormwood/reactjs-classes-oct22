@@ -34,6 +34,22 @@ export default class MessageBox extends React.Component {
 
 	// 2. do different things when different events happen
 	// 		on the webpage 
+	componentDidMount(){
+		console.log("The MessageBox was loaded for the first time!");
+	}
+
+
+	componentDidUpdate(){
+		// Infinite loop, do not do:
+		// this.setState((state) => {
+		// 	return {
+		// 		counter: state.counter + 1
+		// 	}
+		// })
+
+		console.log("MessageBox updated!");
+	}
+
 
 
 	render(){
