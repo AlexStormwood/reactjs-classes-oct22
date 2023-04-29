@@ -15,7 +15,8 @@ export default class MessageBox extends React.Component {
 		super(props);
 
 		this.state = {
-			backgroundColor: "lightblue"
+			backgroundColor: "lightblue",
+			counter: 0
 		}
 
 		// this.changeBgToRed = this.changeBgToRed.bind(this);
@@ -41,6 +42,33 @@ export default class MessageBox extends React.Component {
 				{this.props.children}
 				<button onClick={this.changeBgToRed}>
 					Change background to red
+				</button>
+
+				<button onClick={() => {
+					this.setState({backgroundColor:"lightblue"})
+				}} >
+					Change background to light blue 
+				</button>
+
+				<button onClick={() =>{
+					this.setState((state) => {
+						return {
+							counter: state.counter + 1
+						}
+						 
+					})
+				}}>
+					Count is {this.state.counter}
+				</button>
+
+				<button onClick={() => {
+					this.setState((banana) => {
+						return {
+							counter: banana.counter - 1
+						}
+					})
+				}}>
+					Decrease the count!
 				</button>
 			</div>
 		)
