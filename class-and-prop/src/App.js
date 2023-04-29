@@ -1,10 +1,17 @@
+import MessageBox from "./MessageBox";
 import MessageDisplayComponent from "./MessageDisplayComponent";
 
 
 function App() {
   return (
     <div className="App">
-      <MessageDisplayComponent message="Hello world!" />
+		<MessageBox>
+			
+			<MessageDisplayComponent message="Hello world!" />
+      		<MessageDisplayComponent  />
+
+		</MessageBox>
+
     </div>
   );
 }
